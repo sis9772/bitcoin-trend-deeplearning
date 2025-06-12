@@ -4,7 +4,7 @@ from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 
 # 데이터 불러오기ㅋ
-data = loadmat('btc_features.mat')
+data = loadmat('data/btc_features.mat')
 X = data['X']    # (N, T, F)
 y = data['y'].flatten()
 

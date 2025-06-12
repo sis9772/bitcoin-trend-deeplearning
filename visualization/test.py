@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 
 # 파일 불러오기
-features = scipy.io.loadmat("btc_features.mat")
-results = scipy.io.loadmat("prediction_result.mat")
+features = scipy.io.loadmat("data/btc_features.mat")
+results = scipy.io.loadmat("data/prediction_result.mat")
 
 # 정답과 예측
 y_all = features["y"].flatten()

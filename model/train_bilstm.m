@@ -1,5 +1,5 @@
 %% Load processed data
-load('btc_features.mat');  % Contains X (NxTxF), y (Nx1), mu, sigma
+load('data/btc_features.mat');  % Contains X (NxTxF), y (Nx1), mu, sigma
 
 % Check shape
 [numSamples, sequenceLength, numFeatures] = size(X);

@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.io import savemat
 
 # 1. Load preprocessed 15-min data with indicators and labels
-df = pd.read_csv("btc_15min_with_indicators_and_labels.csv", parse_dates=["datetime"])
+df = pd.read_csv("data/btc_15min_with_indicators_and_labels.csv", parse_dates=["datetime"])
 df.set_index("datetime", inplace=True)
 
 # 2. Filter only rows with usable labels

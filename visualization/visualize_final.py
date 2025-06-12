@@ -4,13 +4,13 @@ import plotly.graph_objects as go
 from scipy.io import loadmat
 
 # 1. Load prediction results
-mat = loadmat('prediction_result.mat')
+mat = loadmat('data/prediction_result.mat')
 y_true = mat['YVal_numeric'].flatten()
 y_pred = mat['YPred_numeric'].flatten()
 val_indices = mat['val_indices'].flatten()
 
 # 2. Load CSV
-df = pd.read_csv('btc_15min_with_indicators_and_labels.csv', parse_dates=['datetime'])
+df = pd.read_csv('data/btc_15min_with_indicators_and_labels.csv', parse_dates=['datetime'])
 
 # 3. Filter using indices from .mat file
 df_valid = df.loc[val_indices].copy().reset_index(drop=True)
@@ -71,5 +71,8 @@ fig.update_layout(
     template='plotly_white',
     height=600
 )
+
+# Save the figure as an HTML file
+fig.write_html("visualization/btc_prediction_visualization.html")
 
 fig.show()

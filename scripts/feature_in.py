@@ -5,7 +5,7 @@ from sklearn.feature_selection import SelectFromModel
 from sklearn.model_selection import train_test_split
 
 # .mat 파일 로드
-data = scipy.io.loadmat('btc_features.mat')
+data = scipy.io.loadmat('data/btc_features.mat')
 X = data['X']  # (N, T, F)
 y = data['y'].flatten()
 
